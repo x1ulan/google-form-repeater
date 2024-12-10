@@ -10,7 +10,7 @@ first at all, `mkdir ./config`
 
 > config will store at `./config/<filename>.json`
 
-> `-o` : the output config file path, **default is ./config/\<random chars\>**
+> `-o` : the output config file path, **default is \<random chars\>**
 
 ## run
 `python3 app.py run <filename> [-t] [-d]`
