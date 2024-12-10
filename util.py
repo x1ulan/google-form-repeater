@@ -4,6 +4,7 @@ from lxml import html
 from time import sleep
 from threading import Thread
 from json import loads, dumps
+from secrets import token_hex
 
 XPATH_DATA_PARAMS = '(//div[@jsmodel="CP1oW"])/@data-params'
 
@@ -91,7 +92,7 @@ def send_request(args):
                     dl.append((i[0], j))
             else:
                 dl.append((i[0], i[1]))
-        print(requests.post(config['url'], dl).status_code)
+        print(f'[ {token_hex(1)} ]', requests.post(config['url'], dl).status_code)
 
     threads = []
     for i in range(time):
